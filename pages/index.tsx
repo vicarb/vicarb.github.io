@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { Profile } from '@/components/Profile/Profile'
 import { About } from '@/components/About/About'
 import { Experience } from '@/components/Experience/Experience'
+import { Education } from '@/components/Education/Education'
 import { Contact } from '@/components/Contact/Contact'
 import { FName } from '@/components/FName/FName'
 import JobGrid from '@/components/JobGrid/JobGrid'
@@ -154,10 +155,13 @@ export default function Home() {
       <Navbar/>
       <FName/>
       <main className={styles.main}>
-      <Profile/>
-      <JobGrid/>
-      <About/>
+
+      <section id="experience-section" className=''>
       <Experience/>
+      </section>
+      <section id="education-section" className='p-8'>
+      <Education/>
+      </section>
       <Contact/>
         
       </main>
