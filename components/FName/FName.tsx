@@ -12,7 +12,7 @@ export const FName = () => {
         ease: [0, 0.71, 0.2, 1.01]
       }}>
     <div className="text-center">
-    <p className="text-lg font-medium leading-8 text-white">Hi, my name is</p>
+    <p className="text-lg font-medium leading-8 text-white">Hola, mi nombre es</p>
       <h1 className="mt-3 text-[4.5rem] font-bold leading-tight tracking-tight text-black">Víctor Cárdenas Bahamonde</h1>
       <p className="mt-3 text-lg font-semibold text-black">Soy ingeniero comercial  y me convertí en desarrollador de software fullstack, actualmente enfocado en desarrollar proyectos nativos en la nube.</p>
     </div>
