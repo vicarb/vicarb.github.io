@@ -159,7 +159,7 @@ export default function Home() {
       <section id="experience-section" className=''>
       <Experience/>
       </section>
-      <section id="education-section" className='p-8'>
+      <section id="education-section" className='pt-8'>
       <Education/>
       </section>
       <Contact/>
