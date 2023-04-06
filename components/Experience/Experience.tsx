@@ -1,5 +1,6 @@
-import React from 'react'
-import { Inter } from 'next/font/google'
+import React from 'react';
+import Link from 'next/link';
+import { Inter } from 'next/font/google';
 import { Roboto } from 'next/font/google';
 
 const inter = Inter({
@@ -41,10 +42,16 @@ export const Experience = () => {
               </div>
               <h3 className={`${inter.className} text-gray-400 text-sm mb-2`}>{item.company}</h3>
               <p className={`${inter.className} text-white leading-6`}>{item.description}</p>
+              <Link href="https://vicarb.github.io/super-memory">
+                <h1 className="inline-block px-4 py-2 bg-indigo-500 rounded-md text-white font-semibold mt-4 hover:bg-indigo-600 transition duration-300 ease-in-out">
+                  Go to Another Page
+                </h1>
+              </Link>
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
