@@ -43,9 +43,7 @@ export const Experience = () => {
               <h3 className={`${inter.className} text-gray-400 text-sm mb-2`}>{item.company}</h3>
               <p className={`${inter.className} text-white leading-6`}>{item.description}</p>
               <Link href="https://vicarb.github.io/super-memory">
-                <h1 className="inline-block px-4 py-2 bg-indigo-500 rounded-md text-white font-semibold mt-4 hover:bg-indigo-600 transition duration-300 ease-in-out">
-                  Go to Another Page
-                </h1>
+                <a className="mt-4 px-4 py-2 bg-blue-500 rounded-lg text-white font-bold text-sm hover:bg-blue-600 transition-colors duration-300">Go to Another Page</a>
               </Link>
             </div>
           ))}
