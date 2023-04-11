@@ -33,6 +33,7 @@ export const Experience = () => {
     <div className="py-12 bg-gray-900 rounded-lg">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className={`${roboto.className} text-3xl font-bold text-white mb-4`}>Experiencia</h1>
+        
         <div className="space-y-8">
           {experienceContent.map((item, index) => (
             <div key={index} className="p-6 bg-gray-800 rounded-lg">
@@ -43,7 +44,7 @@ export const Experience = () => {
               <h3 className={`${inter.className} text-gray-400 text-sm mb-2`}>{item.company}</h3>
               <p className={`${inter.className} text-white leading-6`}>{item.description}</p>
 
-                <a href="https://vicarb.github.io/super-memory" className="mt-4 px-4 py-2 bg-blue-500 rounded-lg text-white font-bold text-sm hover:bg-blue-600 transition-colors duration-300">Go to Another Page</a>
+                
 
             </div>
           ))}
