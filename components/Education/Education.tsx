@@ -27,7 +27,7 @@ const educationContent = [
 
 export const Education = () => {
   return (
-    <div className="py-12 bg-gray-900 rounded-lg">
+    <div className="py-12 bg-blue-500 opacity-75 rounded-lg">
       <div className="max-w-5xl sm:mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className={`${roboto.className} text-3xl font-bold text-white mb-8`}>Educación</h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { motion } from "framer-motion"
+import { Experience } from '../Experience/Experience';
 
 function scrollToSection(sectionId: string) {
   const section = document.getElementById(sectionId);
@@ -39,8 +40,24 @@ export const FName = () => {
         >Experiencia
         </a>
       <a href="#experience-section" onClick={(event) => handleLinkClick(event, "education-section") }className="transform rounded-md border border-slate-200 px-5 py-3 font-medium text-slate-900 transition-colors hover:bg-slate-50">Educación </a>
+     
     </div>
+    <div className="mt-6 flex items-center justify-center gap-4">
+    <a
+            href="https://vicarb.github.io/art-gall"
+            
+            className="transform rounded-md bg-amber-300/95 px-5 py-3 font-medium text-white transition-colors hover:bg-slate-50 hover:text-black z-0"
+          >Art Gall
+          </a>
+          <a
+            href="https://vicarb.github.io/super-memory"
+            
+            className="transform rounded-md bg-emerald-300/95 px-5 py-3 font-medium text-white transition-colors hover:bg-slate-50 hover:text-black z-0"
+          >Ecommerce
+          </a>
+          </div>
   </motion.div>
+  
 </section>
   )
 }
