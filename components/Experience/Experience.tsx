@@ -17,11 +17,13 @@ const experienceContent = [
   {
     title: "Desarrollador Full-Stack",
     company: "Acme Inc.",
+    url: "https://vicarb.github.io/super-memory",
     date: "Enero 2022 - Presente",
     description: "Desarrollo y mantenimiento de aplicaciones web y móviles, incluyendo un sitio de comercio electrónico y una aplicación móvil para iOS y Android."
   },
   {
     title: "Desarrollador Front-End",
+    url: "https://vicarb.github.io/reusable-comps",
     company: "XYZ Corp.",
     date: "Septiembre 2020 - Diciembre 2021",
     description: "Desarrollo de extensiones de Chrome y aplicaciones web para clientes corporativos."
@@ -44,8 +46,11 @@ export const Experience = () => {
               <h3 className={`${inter.className} text-gray-400 text-sm mb-2`}>{item.company}</h3>
               <p className={`${inter.className} text-white leading-6`}>{item.description}</p>
 
-                
-
+              <Link href={item.url}>
+                <h1 className="bg-white text-gray-800 py-2 px-4 rounded-md mt-4 inline-block">
+                  Visit Website
+                </h1>
+              </Link>
             </div>
           ))}
         </div>
@@ -53,4 +58,3 @@ export const Experience = () => {
     </div>
   );
 };
-
