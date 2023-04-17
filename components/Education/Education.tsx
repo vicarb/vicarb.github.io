@@ -14,7 +14,13 @@ const roboto = Roboto({
 
 const educationContent = [
   {
-    title: "Master of Science in Marketing",
+    title: "Full-Stack Software Developer",
+    institution: "Self-taught",
+    date: "Self-taught since 2020",
+  },
+  {
+    
+    title: "MSc in Marketing",
     institution: "Universidad Adolfo Ibáñez",
     date: "Graduado en 2020",
   },
@@ -30,7 +36,7 @@ export const Education = () => {
     <div className="py-12 bg-blue-500 opacity-75 rounded-lg">
       <div className="max-w-5xl sm:mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className={`${roboto.className} text-3xl font-bold text-white mb-8`}>Educación</h1>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {educationContent.map((item, index) => (
             <div key={index} className="p-6 bg-gray-800 rounded-lg">
               <h2 className={`${inter.className} text-lg font-bold text-white mb-2`}>{item.title}</h2>
