@@ -16,7 +16,7 @@ const roboto = Roboto({
 const experienceContent = [
   {
     title: "Desarrollador Full-Stack",
-    company: "Acme Inc.",
+    company: "Webcl.",
     url: "https://vicarb.github.io/super-memory",
     date: "Enero 2022 - Presente",
     description: "Desarrollo y mantenimiento de aplicaciones web y móviles, incluyendo un sitio de comercio electrónico y una aplicación móvil para iOS y Android."
@@ -24,7 +24,7 @@ const experienceContent = [
   {
     title: "Desarrollador Front-End",
     url: "https://vicarb.github.io/reusable-comps",
-    company: "XYZ Corp.",
+    company: "Webcl",
     date: "Septiembre 2020 - Diciembre 2021",
     description: "Desarrollo de extensiones de Chrome y aplicaciones web para clientes corporativos."
   }
