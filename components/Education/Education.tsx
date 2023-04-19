@@ -38,12 +38,11 @@ export const Education = () => {
         <h1 className={`${roboto.className} text-3xl font-bold text-white mb-8`}>Educación</h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 flex justify-between items-center" >
           {educationContent.map((item, index) => (
-            <div key={index} className="p-6 bg-gray-800 rounded-lg ">
+            <div key={index} className="p-12 bg-gray-800 rounded-lg">
               <h2 className={`${inter.className} text-lg font-bold text-white mb-2`}>{item.title}</h2>
               <h3 className={`${inter.className} text-gray-400 text-sm mb-2`}>{item.institution}</h3>
               <p className={`${inter.className} text-gray-400 text-sm`}>{`Graduado en ${item.date}`}</p>
             </div>
-           
           ))}
         </div>
       </div>
