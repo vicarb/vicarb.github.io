@@ -1,10 +1,20 @@
 import Link from 'next/link';
+import { useContext } from 'react';
+import { LanguageContext } from '@/context/LanguageContext';
 
 const Navbar = () => {
+  const { english, setEnglish } = useContext(LanguageContext);
+  console.log("this is english", english);
+  
+
+  const handleLanguageToggle = () => {
+    setEnglish(!english);
+  };
   return (
     <section>
     <nav className="bg-sky-400 a"> {/* Add a z-index value */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" passHref>
@@ -22,7 +32,15 @@ const Navbar = () => {
               <Link href="https://vicarb.github.io/art-gall" passHref>
                 <span className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Art Gallery</span>
               </Link>
+              <button
+      className="inline-flex items-center px-4 py-2 border border-transparent text-base text-xs rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      onClick={handleLanguageToggle}
+      >
+      {english ? "ESP" : "ENG"}
+    </button>
+    
             </div>
+            
           </div>
         </div>
       </div>
