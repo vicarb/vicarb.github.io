@@ -165,7 +165,9 @@ export default function Home() {
       <section id="education-section" className='pt-8'>
       <Education/>
       </section>
+      <section className='bg-blue-500 rounded-md mt-12 opacity-75'>
       <Contact/>
+      </section>
         
       </main>
     </>

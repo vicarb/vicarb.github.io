@@ -8,9 +8,9 @@ const Contact = () => {
   }
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 a">
-  <div className="max-w-md mx-auto bg-blue-500 rounded-md shadow-md overflow-hidden">
-    <h2 className="text-center text-3xl font-semibold py-6 text-slate-100">Contact Me!</h2>
+    <div className="a p-12 sm:px-6 lg:px-8">
+  <div className="max-w-md md:max-w-lg mx-auto bg-blue-500 rounded-md shadow-md overflow-hidden">
+    <h2 className="text-center text-3xl font-semibold py-6 text-slate-50">Contact Me!</h2>
     <form onSubmit={handleSubmit} className="px-8 py-6 space-y-6 bg-blue-500">
       <div>
         <label htmlFor="name" className="block text-slate-100 font-medium mb-2 text-lg">Name</label>
@@ -30,6 +30,8 @@ const Contact = () => {
     </form>
   </div>
 </div>
+
+
 
   )
 }
