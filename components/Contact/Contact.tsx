@@ -13,7 +13,7 @@ const Contact = () => {
     console.log(formData);
     
     try {
-      const response = await fetch('https://singular-marzipan-df9366.netlify.app/api/contact/', {
+      const response = await fetch('https://singular-marzipan-df9366.netlify.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
