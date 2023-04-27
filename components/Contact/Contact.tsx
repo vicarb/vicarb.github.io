@@ -81,6 +81,7 @@ const Contact = () => {
         <div className="flex justify-center items-center">
           <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 5v6h3v10h4V11h3V5M8 5H5v14h14v-7"></path>
           </svg>
           <p className="text-white font-medium">Submitting...</p>
         </div>
@@ -89,11 +90,12 @@ const Contact = () => {
     {isSuccess && (
       <div className="px-4 sm:px-8 py-4 sm:py-6 bg-green-500 text-white text-center">
         <p className="font-medium text-lg">Message sent!</p>
-        <button onClick={() => setIsSuccess(false)} className="mt-4 bg-white text-green-500 font-medium py-2 px-3 sm:px-4 rounded-md text-lg">Done</button>
+        <button onClick={() => {setIsSuccess(false); window.scrollTo(0, 0)}} className="mt-4 bg-white text-green-500 font-medium py-2 px-3 sm:px-4 rounded-md text-lg">Done</button>
       </div>
     )}
   </div>
 </div>
+
 
   
 
