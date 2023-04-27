@@ -12,7 +12,7 @@ const inter = Inter({
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['300'],
+  weight: ['400'],
 });
 
 const experienceContent = [
@@ -37,13 +37,12 @@ const experienceContent = [
 export const Experience = () => {
   const { english } = useContext(LanguageContext);
   return (
-    <div className="py-12 bg-blue-500 opacity-75 rounded-lg">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className={`${roboto.className} text-3xl font-bold text-white mb-4`}>{english ? "Experience" : "Experiencia"}</h1>
-        
-        <div className="space-y-8">
+    <div className="p-4 lg:p-12 bg-blue-500 opacity-75 rounded-lg">
+      <div className="max-w-5xl mx-auto">
+        <h1 className={`${roboto.className} text-3xl font-bold text-white  mb-4 text-center`}>{english ? "Experience" : "Experiencia"}</h1>
+        <div className="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2">
           {experienceContent.map((item, index) => (
-            <div key={index} className="p-6 bg-gray-800 rounded-lg">
+            <div key={index} className="p-6 md:p-12 bg-gray-800 rounded-lg">
               <div className="flex justify-between items-center mb-2">
                 <h2 className={`${inter.className} text-lg font-bold text-white`}>{item.title}</h2>
                 <p className={`${inter.className} text-gray-400 text-sm`}>{item.date}</p>
