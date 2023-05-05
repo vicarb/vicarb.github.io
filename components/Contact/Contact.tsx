@@ -1,8 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { LanguageContext } from '@/context/LanguageContext';
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const { english } = useContext(LanguageContext);
   const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -60,10 +62,10 @@ const Contact = () => {
   return (
     <div className="a p-4 sm:p-12 sm:px-6 lg:px-8">
   <div className="max-w-md md:max-w-lg mx-auto bg-blue-500 rounded-md shadow-md overflow-hidden">
-    <h2 className="text-center text-3xl font-semibold py-6 text-slate-50">Contact Me!</h2>
+    <h2 className="text-center text-3xl font-semibold py-6 text-slate-50">{ english ? "Contact Me!": "Contáctame!"}</h2>
     <form onSubmit={handleSubmit} className="px-4 sm:px-8 py-6 space-y-4 sm:space-y-6 bg-blue-500">
       <div>
-        <label htmlFor="name" className="block text-slate-100 font-medium mb-2 text-lg">Name</label>
+        <label htmlFor="name" className="block text-slate-100 font-medium mb-2 text-lg">{english ? "Name" :"Nombre"}</label>
         <input type="text" id="name" name="name" className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 py-2 px-3 sm:px-4 text-gray-800 text-lg" required value={formData.name} onChange={handleChange} />
       </div>
       <div>
@@ -71,11 +73,11 @@ const Contact = () => {
         <input type="email" id="email" name="email" className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 py-2 px-3 sm:px-4 text-gray-800 text-lg" required value={formData.email} onChange={handleChange} />
       </div>
       <div>
-        <label htmlFor="message" className="block text-slate-100 font-medium mb-2 text-lg">Message</label>
+        <label htmlFor="message" className="block text-slate-100 font-medium mb-2 text-lg">{english ? "Message": "Mensaje"}</label>
         <textarea id="message" name="message" rows={5} className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 py-2 px-3 sm:px-4 text-gray-800 text-lg" required value={formData.message} onChange={handleChange}></textarea>
       </div>
       <div>
-        <button type="submit" className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-3 sm:px-4 rounded-md text-lg">Send Message</button>
+        <button type="submit" className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-3 sm:px-4 rounded-md text-lg">{english ? "Send Message": "Enviar Mensaje"}</button>
       </div>
       {isLoading && (
         <div className="flex justify-center items-center">

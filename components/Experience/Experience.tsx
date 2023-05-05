@@ -17,7 +17,8 @@ const roboto = Roboto({
 
 const experienceContent = [
   {
-    title: "Desarrollador Full-Stack",
+    title: "Full-Stack Developer",
+    titulo: "Desarrollador Full Stack",
     company: "Webcl.",
     url: "https://vicarb.github.io/super-memory",
     date: "Enero 2022 - Presente",
@@ -25,7 +26,8 @@ const experienceContent = [
     description: "Development and maintenance of web and mobile applications, including an e-commerce site and a mobile application for iOS and Android."
   },
   {
-    title: "Desarrollador Front-End",
+    title: "Frontend Developer",
+    titulo: "Desarrollador Frontend",
     url: "https://vicarb.github.io/reusable-comps",
     company: "Webcl",
     date: "Septiembre 2020 - Diciembre 2021",
@@ -44,14 +46,14 @@ export const Experience = () => {
           {experienceContent.map((item, index) => (
             <div key={index} className="p-6 md:p-12 bg-gray-800 rounded-lg">
               <div className="flex justify-between items-center mb-2">
-                <h2 className={`${inter.className} text-lg font-bold text-white`}>{item.title}</h2>
+                <h2 className={`${inter.className} text-lg font-bold text-white`}>{english ? item.title : item.titulo}</h2>
                 <p className={`${inter.className} text-gray-400 text-sm`}>{item.date}</p>
               </div>
               <h3 className={`${inter.className} text-gray-400 text-sm mb-2`}>{item.company}</h3>
               <p className={`${inter.className} text-white leading-6`}>{english ? item.description : item.descripcion}</p>
 
               <Link href={item.url}>
-                <h1 className="bg-white text-gray-800 py-2 px-4 rounded-md mt-4 inline-block">
+                <h1 className="bg-white text-gray-800 py-2 px-4 rounded-md mt-4 inline-block font-semibold text-md">
                   {english ? "Visit Website" : "Visitar sitio web"}
                 </h1>
               </Link>
