@@ -1,38 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Página de presentación
 
-## Getting Started
+Página personal en Next.js, React y TypeScript. Exportación estática, sin base de datos ni servicios de pago.
 
-First, run the development server:
+## Desarrollo
 
-```bash
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Datos de contacto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Editar `app/site.ts`: nombre, correo, WhatsApp (con código de país) y LinkedIn. Mientras no exista un correo o WhatsApp configurado, la sección de contacto indica que estará disponible próximamente. No hay formulario que simule envíos.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Verificación
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```sh
+npm run build
+npm run typecheck
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+La compilación genera `out/`. Las tipografías tienen alternativas de sistema si Google Fonts no está disponible.
 
-## Learn More
+## Publicación posterior
 
-To learn more about Next.js, take a look at the following resources:
+**Vercel:** importar este directorio como proyecto Next.js; comando `npm run build`, salida estática `out`. No requiere variables de entorno.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**GitHub Pages:** ejecutar `NEXT_PUBLIC_BASE_PATH=/nombre-del-repositorio npm run build` y publicar el contenido de `out/` mediante GitHub Actions. Para un dominio propio o repositorio `usuario.github.io`, omitir `NEXT_PUBLIC_BASE_PATH`. Añadir un archivo `.nojekyll` en el directorio publicado si se publica desde una rama.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Antes de publicar, confirmar nombre, canal de contacto y descripción de experiencia. La página no contiene cifras de ahorro, clientes o testimonios inventados.
